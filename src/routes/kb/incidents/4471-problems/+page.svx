@@ -4,7 +4,7 @@ title: '#4471 holds two causes'
 owner: Adrian Soczyński
 status: open
 reviewed: 2026-11-02
-signature: sok99
+signature: "v1.eyJzdWIiOiI2OTcwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2NTQ5NTQsImV4cCI6MTc5Mzc0MTM1NH0.YCRMxam3nlyuItzK_MOfMwgnwVv13sT1KHFWtt3RSNI"
 ---
 
 <script>
