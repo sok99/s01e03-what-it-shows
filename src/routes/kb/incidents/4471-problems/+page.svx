@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 holds two causes'
 owner: Adrian Soczyński
-status: open
+status: closed
 reviewed: 2026-11-02
 signature: "v1.eyJzdWIiOiI2OTcwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2NTQ5NTQsImV4cCI6MTc5Mzc0MTM1NH0.YCRMxam3nlyuItzK_MOfMwgnwVv13sT1KHFWtt3RSNI"
 ---
@@ -30,5 +30,12 @@ Reports the desk read as a one-day move stay in this count. The table footnotes 
 ## hint
 
 booking-v3 prints `MM/DD/YYYY` under the date field. People type what that hint says, and the form reads the date the tenant's way. That is a different bug from the parser. Those reports were merged into #4471 because the subject matched.
+
+## Closed 5 October
+
+Engineering closed #4471.
+
+- **parser.** Fixed. `fix(dates): parse dd/mm for eu locales`
+- **hint.** Won't fix. The booking-v3 form is retired.
 
 <RenderStamp {signature} />
