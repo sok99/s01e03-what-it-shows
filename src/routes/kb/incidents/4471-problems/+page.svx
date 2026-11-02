@@ -1,0 +1,34 @@
+---
+layout: runbook
+title: '#4471 holds two causes'
+owner: Adrian Soczyński
+status: open
+reviewed: 2026-11-02
+signature: sok99
+---
+
+<script>
+  import Callout from '#lib/kb/Callout.svelte';
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+#4471 merged reports because their subject lines matched. The cause does not come from the subject. It comes from the tenant and the channel.
+
+<Callout kind="warn">
+The desk marked one known issue. The table shows a second cause, and that cause has no ticket of its own.
+</Callout>
+
+<CauseTable ticket={4471} />
+
+## parser
+
+The shared parser reads every date month first. For a day-first tenant, the day and the month come out flipped. That is the cause most of these reports share, so it is what #4471 actually is.
+
+Reports the desk read as a one-day move stay in this count. The table footnotes them. They do not get a separate cause.
+
+## hint
+
+booking-v3 prints `MM/DD/YYYY` under the date field. People type what that hint says, and the form reads the date the tenant's way. That is a different bug from the parser. Those reports were merged into #4471 because the subject matched.
+
+<RenderStamp {signature} />
